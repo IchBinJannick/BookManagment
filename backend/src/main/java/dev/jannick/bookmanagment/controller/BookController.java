@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController //answers HTTP requests and returns automatic JSON
 @RequestMapping("/api/books") //all endpoint of this class start wiuth /apo/books
 @RequiredArgsConstructor
