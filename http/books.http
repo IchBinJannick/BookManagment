@@ -1,0 +1,50 @@
+###get all books
+GET http://localhost:8080/api/books
+Accept: application/json
+
+###get single book
+GET http://localhost:8080/api/books/1
+Accept: application/json
+
+###get unread books
+GET http://localhost:8080/api/books/unread
+Accept: application/json
+
+###generate new book
+GET http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "isbn": "978-0132350884",
+  "releaseyear": 2008,
+  "read": false
+}
+
+### generate second book
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "The Pragmatic Programmer",
+  "author": "David Thomas",
+  "isbn": "978-0135957059",
+  "releaseyear": 2019,
+  "read": true
+}
+
+### update the book (as read)
+PUT http://localhost:8080/api/books/1
+Content-Type: application/json
+
+{
+  "titel": "Clean Code",
+  "autor": "Robert C. Martin",
+  "isbn": "978-0132350884",
+  "erscheinungsjahr": 2008,
+  "gelesen": true
+}
+
+### delete book
+DELETE http://localhost:8080/api/books/1
